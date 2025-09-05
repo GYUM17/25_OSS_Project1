@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김원겸 | Developer Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      animation: fadeDown 1s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #cbd5e1;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .tech-stack {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #38bdf8;
+      padding-left: 0.5rem;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #cbd5e1;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>김원겸</h1>
+    <p>한동대학교 전산전자공학부 · AI 컴퓨터공학 심화</p>
+    <p>관심 분야: 웹 · 앱 · 백엔드</p>
+  </header>
+
+  <section>
+    <h2>기술 스택</h2>
+    <div class="grid tech-stack">
+      <div class="card">C</div>
+      <div class="card">Java</div>
+      <div class="card">Python</div>
+      <div class="card">Flutter</div>
+      <div class="card">Firebase</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>경험</h2>
+    <div class="grid">
+      <div class="card">
+        <p>Design Sprint 및 개발 프로젝트 참여</p>
+      </div>
+      <div class="card">
+        <p>2025 Summer 디자이너와 개발자 협업 캠프 참여</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>GitHub</h2>
+    <div class="card">
+      <p><a href="https://github.com/GYUM17" target="_blank">github.com/GYUM17</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>연락처</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:wng41760@gmail.com">wng41760@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 김원겸 | Developer Portfolio</p>
+  </footer>
+
+  <script>
+    // JS 효과 (카드에 랜덤 애니메이션)
+    document.querySelectorAll('.card').forEach((card, i) => {
+      card.style.opacity = 0;
+      setTimeout(() => {
+        card.style.transition = 'opacity 0.6s ease';
+        card.style.opacity = 1;
+      }, i * 200);
+    });
+  </script>
+</body>
+</html>
