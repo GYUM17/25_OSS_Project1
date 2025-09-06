@@ -6,6 +6,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: #d14836;
+            font-family: Arial;
+        }
+
+        #header {
+            padding: 15px;
+            font-size: 30px;
+            color: white;
+            line-height: 26px;
+        }
+
+        #header h1 {
+            margin: 0;
+            line-height: 50px;
+        }
+
+        #contents{
+            background-color: white;
+            padding: 10px;
+            font-size: 13px;
+            font-family: Verdana;
+            margin: 0px;
+        }
+        #contents h1, #contents h2{
+            color: #d14836;
+
+        }
+        #right{
+            background-color: #f6dad7;
+            margin: 0px;
+            padding: 10px;
+            color: #d14836;
+        }
+        #menubar{
+            float: right;
+            width: 190px;
+        }
+        #footer{
+            text-align: center;
+            font-size: 10px;
+            color: white;
+            line-height: 20px;
+        }
+        a{
+            color: #d14836;
+            text-decoration: none;
+        }
+        #menulist{
+            padding:0;
+            font: 16px verdana;
+        }
+        .menuitem {
+            width:155px;
+            background-color: #d14836;
+            padding: 7px;
+            border-radius: 40px;
+            border-color: #f1f1f1;
+            border: 1px solid #d14836;
+            list-style-type: none;
+            cursor: pointer;
+            margin: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .menuitem:nth-child(2) {
+            background-color:white;
+            color: #d14836;
+            font-weight: bold;
+        }
+
+        .menuitem:hover {
+            background-color: #ffffff;
+            color: #d14836;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,13 +92,13 @@
         <p>Use the menu to select different Stylesheets</p>
     </div>
     <div id="maincontainer">
-        <div id="left">
-            <ul id="left">
-                <li>Stylesheet 1</li>
-                <li>Stylesheet 2</li>
-                <li>Stylesheet 3</li>
-                <li>Stylesheet 4</li>
-                <li>No Stylesheet</li>
+        <div id="menubar">
+            <ul id="menulist">
+                <li class="menuitem">Stylesheet 1</li>
+                <li class="menuitem">Stylesheet 2</li>
+                <li class="menuitem">Stylesheet 3</li>
+                <li class="menuitem">Stylesheet 4</li>
+                <li class="menuitem">No Stylesheet</li>
             </ul>
         </div>
         <div id="contents">
@@ -50,7 +128,7 @@
                 magna aliquam erat volutpat.</p>
         </div>
     </div>
-    <div id="fotter">
+    <div id="footer">
         <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
             dolore
             magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
